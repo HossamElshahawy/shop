@@ -33,6 +33,8 @@ Route::middleware('auth')->group(function () {
 
     // category
     route::resource('category',\App\Http\Controllers\Dashboard\CategoryController::class);
+    Route::post('category_status',[\App\Http\Controllers\Dashboard\CategoryController::class,'categoryStatus'])->name('category.status');
+
 
 });
 
